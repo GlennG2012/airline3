@@ -46,7 +46,7 @@ class FlightsTestCase(TestCase):
         c = Client()
         response = c.get("/")
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.context["flights"].count(), 2)
+        self.assertEqual(response.context["flights"].count(), 3)
 
     def test_valid_flight_page(self):
         a1 = Airport.objects.get(code="AAA")
